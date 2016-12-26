@@ -4,6 +4,9 @@ import open from 'open';
 import webpack from 'webpack';
 import config from '../webpack.config.dev.js';
 
+/* eslint-disable no-console */
+  // don't care about wrting to console in build script file
+
 const port = 3000;
 const app = express();
 const compiler = webpack(config);
