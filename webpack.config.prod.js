@@ -3,7 +3,10 @@ import path from 'path';
 
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+// for cache-busting:
 import WebpackMd5Hash from 'webpack-md5-hash';
+// for extract and minify CSS:
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 // devtool:
 // reommended source-map is slower than inline-source-map to build but
@@ -25,6 +28,9 @@ export default {
     // [chunkhash] comes from WebpackMd5Hash
   },
   plugins: [
+    // Generate an external css file with a hash in the filename
+    new ExtractTextPlugin('[name].[contenthash].css'),
+
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
 
@@ -60,10 +66,11 @@ export default {
 
 
   ],
+  //gotta admit, don't really understad the module loaders stuff...
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']}
+      {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
     ]
   }
 }
