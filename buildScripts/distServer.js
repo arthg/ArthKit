@@ -9,7 +9,7 @@ import open from 'open';
 import compression from 'compression';
 
 /* eslint-disable no-console */
-  // don't care about writing to console in build script file
+// don't care about writing to console in build script file
 
 const port = 3000;
 const app = express();
