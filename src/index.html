@@ -2,16 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <!-- BEGIN TRACKJS -->
+  <script type="text/javascript">window._trackJs = { token: 'cef970d15b1448c598ee8e9bafe9725b' };</script>
+  <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+  <!-- END TRACKJS -->
+<meta charset="UTF-8">
 <!--  https://qa.polyfill.io/v2/docs/
 Disable minification (remove `.min` from URL path) for more info
 Use the es6 alias to include all features that are part of ECMAScript 6 (for which we currently have polyfills)
 -->
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script>
 </head>
 
 <body>
-<h1>Users</h1>
+  <h1>Users</h1>
   <table>
     <thead>
       <th>&nbsp;</th>
@@ -25,8 +29,8 @@ Use the es6 alias to include all features that are part of ECMAScript 6 (for whi
     </tbody>
   </table>
 
-<!-- script not needed because HtmlWebpackPlugin injects it-->
-<!-- script src="bundle.js"></script -->
+  <!-- script not needed because HtmlWebpackPlugin injects it-->
+  <!-- script src="bundle.js"></script -->
 </body>
 
 </html>
