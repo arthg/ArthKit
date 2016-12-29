@@ -42,6 +42,7 @@ export default {
 
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
+      // several templating languages supported, default is EJS (embedded JS)
       template: 'src/index.html',
       minify: {
         removeComments: true,
@@ -55,7 +56,10 @@ export default {
         minifyCSS: true,
         minifyURLs: true
       },
-      inject: true
+      inject: true,
+      // Properties defined here are available in index.html
+      // using htmlWebpackPlugin.options.varName
+      trackJSToken: 'cef970d15b1448c598ee8e9bafe9725b'
     }),
 
     // Eliminate duplicate packages when generating bundle
