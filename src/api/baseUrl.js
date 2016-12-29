@@ -2,7 +2,8 @@
 // to get mock api use ?useMockApi=true
 
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://mysterious-dawn-16770.herokuapp.com/';
+  // include the trailing slash
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://sheltered-caverns-34151.herokuapp.com';
 }
 
 // better ways to do this! (with libraries)
