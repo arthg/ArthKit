@@ -3,7 +3,7 @@
 
 export default function getBaseUrl() {
   // include the trailing slash
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://sheltered-caverns-34151.herokuapp.com';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://sheltered-caverns-34151.herokuapp.com/';
 }
 
 // better ways to do this! (with libraries)
