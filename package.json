@@ -22,7 +22,7 @@
     "postbuild": "babel-node buildScripts/distServer.js",
     "deploy": "surge ./dist"
   },
-  "author": "Cory House",
+  "author": "Arth",
   "license": "MIT",
   "dependencies": {
     "whatwg-fetch": "1.0.0"
